@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 ###############################################################################
 #                                                                             #
 #    groopm                                                                   #
@@ -220,7 +220,7 @@ if __name__ == '__main__':
                                         help='explore and validate bins')
     bin_explorer.add_argument('dbname', help="name of the database to open")
     bin_explorer.add_argument('-b', '--bids', nargs='+', type=int, default=None, help="bin ids to plot (None for all)")
-    bin_explorer.add_argument('-c', '--cutoff', default=1000, help="cutoff contig size")
+    bin_explorer.add_argument('-c', '--cutoff', default=1000, type=int, help="cutoff contig size")
     bin_explorer.add_argument('-m', '--mode', default="binids", help="Exploration mode [binpoints, binids, allcontigs, unbinnedcontigs, binnedcontigs, binassignments, compare, sidebyside, together]")
     bin_explorer.add_argument('-r', '--no_transform', action="store_true", default=False, help="skip data transformation (3 stoits only)")
     bin_explorer.add_argument('-k', '--kmers', action="store_true", default=False, help="include kmers in figure [only used when mode == together]")

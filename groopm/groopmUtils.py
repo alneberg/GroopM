@@ -336,6 +336,7 @@ class BinExplorer:
                          getUnbinned=True,
                          silent=False,
                          bids=self.bids,
+                         cutOff=coreCut,
                          transform=self.transform)
         if len(self.BM.bins) == 0:
             print "Sorry, no bins to plot"
